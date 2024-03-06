@@ -33,7 +33,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(IllegalCurrencyException.class)
-    public ResponseEntity<ErrorResponse> handleIllegalCurrencyUnitException(IllegalCurrencyException ex) {
+    public ResponseEntity<ErrorResponse> handleIllegalCurrencyException(IllegalCurrencyException ex) {
         ErrorResponse errorResponse = new ErrorResponse(ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
